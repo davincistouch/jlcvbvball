@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLCVB Volleyball</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <img src="Images/ClipArts/JLCVB_Logo.PNG" alt="Jeni's Girls Volleyball Logo" class="logo">
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="training.html">Training Videos</a></li>
+                <li><a href="shop.html">Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="text-bubble">
+            <h1>Meet Head Coach Jess Logan</h1>
+            <p>Your journey to mastering volleyball begins here! Join us for an intensive training program designed to elevate your skills and improve your game.</p>
+            <p>Head Coach Jess Logan is a phenomenal coach with over 10 years of experience. She started varsity as a freshman in high school and continues to excel in both coaching and playing. Jess is passionate about helping athletes reach their potential and has developed many players into stars. Whether you're a beginner or looking to refine your technique, you’re in the right place!</p>
+        </div>
+        <div class="side-ad">
+            <div class="ad-banner">
+                <h2>Ad Banner</h2>
+                <p>Enhance your game with top-notch gear!</p>
+                <p>Check out our partners for special deals.</p>
+                <p>Get a free trial lesson with your first purchase!</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="tel:+17245570329">Call Us: 724-557-0329</a></li>
+            <li><a href="mailto:jlcvbvball@gmail.com">Email Us: jlcvbvball@gmail.com</a></li>
+            <li><a href="https://www.nobordersvbc.com/" target="_blank">Play Club With Us @ No Borders Volleyball Club</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

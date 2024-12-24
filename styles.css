@@ -1,0 +1,261 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Universal Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffebf1;
+    color: #000000;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+    padding: 10px 20px;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    max-width: 180px; /* Enlarges the logo */
+    margin-bottom: 10px; /* Adds space below the logo */
+}
+
+/* Navbar Styles */
+.mobile-nav {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    position: sticky;
+    top: 50px;
+    left: 0;
+    right: 0;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.mobile-nav.show {
+    visibility: visible; /* Show when toggle is active */
+    opacity: 1;
+}
+
+.mobile-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.mobile-nav li {
+    margin: 0 20px;
+}
+
+/* Add this to your existing CSS for the navbar links hover effect */
+.mobile-nav a {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    position: relative
+}
+
+.mobile-nav a:hover {
+    color: #fdfdfd; /* Change text color to hot pink */
+    text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #ff69b4, 0 0 40px #ff69b4, 0 0 50px #ff69b4, 0 0 75px #ff69b4; /* Glowing effect */
+}
+
+
+.mobile-nav a:hover::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Slightly above the text */
+    left: -5px;
+    right: -5px;
+    bottom: -5px; /* Slightly below the text */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 20px hotpink, 0 0 30px hotpink;
+    z-index: -1;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-bubble {
+    background: #ffffff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ff69b4;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+
+.side-ad {
+    margin-top: 20px;
+}
+
+.ad-banner {
+    background-color: #fff;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    font-family: 'Pacifico', cursive;
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffebf1;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-nav ul {
+        justify-content: space-evenly;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    /* Desktop Navigation */
+    .mobile-nav {
+        position: static;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+/* Form Styles */
+.form-container {
+    margin: 20px 0;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-container input {
+    padding: 8px;
+    margin: 5px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #ffb6c1;
+}
+
+#video-container {
+    position: relative;
+}
+
+iframe {
+    position: relative;
+    z-index: 0; /* Keeps iframe below the text */
+}

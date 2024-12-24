@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLCVB Volleyball</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-bar">
+            <img src="Images/ClipArts/JLCVB_Logo.PNG" alt="Jeni's Girls Volleyball Logo" class="logo">
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="training.html">Training Videos</a></li>
+                <li><a href="shop.html">Schedule</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="text-bubble">
+            <h1>SChedule a session</h1>
+            <div class="calendar-form-container">
+                </div>
+                <!-- Scheduling Form -->
+                <div class="form-container">
+                    <form action="submit_form.php" method="POST">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="date">Preferred Training Date:</label>
+                        <input type="date" id="date" name="date" required>
+
+                        <label for="time">Preferred Time:</label>
+                        <input type="time" id="time" name="time" required>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="tel:+17245570329">Call Us: 724-557-0329</a></li>
+            <li><a href="mailto:jenisgirlsvball@gmail.com">Email Us: jlcvbvball@gmail.com</a></li>
+            <li><a href="https://www.nobordersvbc.com/" target="_blank">Play Club With Us @ No Borders Volleyball Club</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>S
